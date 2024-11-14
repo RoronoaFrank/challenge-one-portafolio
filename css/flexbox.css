@@ -1,0 +1,627 @@
+
+/*-----------------------------------------------------------*/
+/*--------------------Vista en movil-------------------------*/
+/*-----------------------------------------------------------*/
+
+.cabecera {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+
+ }
+
+
+.nombre {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+
+}
+
+
+.nombre__logo {
+
+   width: 200px;
+   height: 100px;
+
+}
+
+/*---------------------------------------------------------------------------*/
+/*------------------------------Menú desplegable-----------------------------*/ 
+
+
+.menu {
+
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   transition: all 0.5s ease-in-out;
+   gap: 10px;
+   padding: 10px;
+   top: 15px;
+   right: 15px;
+
+}
+
+
+.menu__botones {
+
+   display: flex;
+   justify-content: end;
+
+}
+
+
+.menu__lista, .menu__cerrar {
+
+   display: none; 
+   flex-direction: column;
+   align-items: end;
+   gap: 15px;
+
+}
+
+/*---------------------------------------------------------------------------*/
+/*---------------------------Sección Presentación----------------------------*/
+
+.presentacion {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2.5rem;
+
+}
+
+
+.presentacion__contenedor {
+
+   display: flex;
+   flex-flow: column nowrap; 
+   justify-content: center;
+   align-items: center;
+   gap: 1.56rem;
+
+}
+
+
+.presentacion__titulo {
+
+   display: flex;
+   text-align: center;
+
+}
+
+
+.presentacion__subtitulo {
+
+   padding: 0 1.25rem 0 1.25rem;
+
+}
+
+
+.redes__menu {
+
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   gap: 5rem;
+   
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*----------------------------Sección Sobre mí-------------------------------*/
+
+.sobre-mi {
+
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 1.7rem;
+   gap: 1.25px;
+   
+}
+
+
+.sobre-mi__firma {
+
+   width: 15rem;
+   height: 7rem;
+   align-self: center;
+
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*----------------------------Sección Habilidades----------------------------*/
+
+
+.habilidades {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1.875rem;
+   margin-bottom: 1.5625rem;
+
+}
+
+
+.habilidades__lista {
+
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 6.25rem;
+   padding: 0, 0.9rem, 0, 0.9rem; 
+   
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*----------------------------Sección Aficiones------------------------------*/
+
+
+.aficiones {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1.25rem;
+
+}
+
+
+.aficiones__lista {
+
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 2.8rem;
+   padding: 0, 0.9rem, 0, 0.9rem;
+   
+}
+
+
+.aficiones__elemento {
+
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+   gap: .9375rem; 
+   margin-bottom: 1.5625rem;
+
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*----------------------------Sección Proyectos------------------------------*/
+
+
+.proyectos {
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.25rem;
+   margin-bottom: 1rem;
+
+}
+
+
+.proyectos__contenedor {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1.25rem;
+}
+
+
+.proyectos__enlace {
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.5625rem;
+
+}
+
+
+.proyectos__enlace__desplegado{
+
+   width: 80%;
+   display: flex;
+   justify-content: center;
+
+}
+
+
+.proyectos__imagen {
+
+   width: 100%;
+   border-radius: 1%;
+   box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.proyectos__imagen:focus {
+
+   outline: 1px solid red;
+
+}
+
+
+.proyectos__enlace__github:focus {
+
+   outline: 1px solid var(--color-texto-titulo);
+   border-radius: 25%;
+
+}
+
+
+.proyectos__pie__imagen {
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+
+}
+
+
+/*------------------------------------------------------------------------------*/
+/*----------------------------Sección de Contacto ------------------------------*/
+
+.contacto {
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   padding-bottom: 1.5rem;
+
+
+}
+
+
+.contacto__titulo {
+
+   align-self: flex-start;
+   padding-left: 1rem;
+
+}
+
+
+.contacto__formulario {
+
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+
+}
+
+
+.contacto__fielset {
+
+   width: 85%;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   
+}
+
+
+footer {
+
+   display: none;
+
+}
+
+
+
+
+
+/*-----------------------------------------------------------*/
+/*--------------------Vista en tablet------------------------*/
+/*-----------------------------------------------------------*/
+
+
+@media (min-width: 768px) {
+
+
+   .nombre__logo {
+
+      width: 250px;
+      height: 150px;
+   
+    }
+
+
+   /*--------------------Menú desplegable--------------------*/
+
+   .menu {
+
+      gap: 20px;
+
+    }
+
+
+   .menu__lista {
+
+      gap: 35px;
+
+    }
+
+
+   /*--------------------Sección Presentación----------------*/
+
+
+   .presentacion{
+
+      padding-top: 20px;
+
+    }
+
+
+   .presentacion__contenedor {
+
+      gap:2.8rem;
+
+    }
+
+
+   .presentacion__subtitulo {
+
+      width: 90%;
+      padding: 0 3rem 0 3rem;
+   
+    }
+
+
+   .redes__menu {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15rem;
+      
+    }
+   
+
+   /*--------------------Sección Sobre mí--------------------*/
+
+   .sobre-mi {
+
+      gap: 2rem;
+      padding: 3.5rem;
+
+    }
+
+   .sobre-mi__texto {
+
+      width: 90%;
+      align-self: center;
+
+    }
+
+   /*Debo decidir que colocar en el contenedor de la firma 
+   si poner mi rubrica o colocar otra cosa para ocupar ese
+   espacio*/
+
+   /*------------------Sección Habilidades-------------------*/
+
+  
+   .habilidades {
+
+      margin-bottom: 5rem;
+
+    }
+  
+   .habilidades__lista {
+
+      gap: 10rem;
+      padding: 0;
+
+    }
+
+
+   /*-------------------Sección Aficiones-------------------*/
+
+   
+   .aficiones {
+
+      margin-bottom: 3rem;
+
+    }
+   
+   .aficiones__lista {
+
+      gap: 6rem;
+      padding: 0;
+
+    }
+
+
+   /*-------------------Sección Proyectos-------------------*/
+
+
+
+   .proyectos {
+
+      gap: 2.5rem;
+      margin-bottom: 1rem;
+
+    }
+
+
+   .proyectos__contenedor {
+
+      gap: 2rem;
+
+    }
+
+
+   .proyectos__enlace__desplegado {
+
+      border: 1px solid green;
+
+    }
+
+
+   .proyectos__imagen {
+
+      width: 650px;
+      align-items: center;
+
+    }
+
+   .proyectos__descripcion {
+
+      width: 85%;
+
+    }
+
+
+   /*-------------------Sección Contacto-------------------*/
+
+
+   .contacto {
+
+      padding: 2.5rem;
+
+    }
+
+}
+
+footer {
+
+   display: none;
+
+}
+
+
+/*-----------------------------------------------------------*/
+/*--------------------Vista en portatil------------------------*/
+/*-----------------------------------------------------------*/
+
+
+@media (min-width: 1024px) {
+    /*En esta parte se añade el estilo para las secciones que se modifican dinamicamente con js*/
+   
+    /*Apartir de este punto el codigo solo se encarga de ordenar los elementos de manera normal*/ 
+
+   .cabecera{
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+
+    }
+
+   .nombre {
+
+      flex-direction: row;
+      flex-shrink: 1;
+      justify-content: space-between;
+      align-self: stretch;
+
+    }
+
+
+   .nombre__logo {
+
+      width: 100px;
+      height: 50px;
+   
+    }
+
+
+   /*-------------------------Menú---------------------------*/
+
+   .menu__botones {
+
+      display: none;
+
+    }
+
+
+   .menu__lista {
+
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 1;
+      gap: 10px;
+
+    }
+
+
+   .menu__elemento a{
+
+      display: flex;
+      white-space: nowrap;
+
+    }
+
+
+   /*--------------------Sección Presentación----------------*/
+
+
+   .presentacion {
+
+      height: 600px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding-left: 5%;
+      border: 1px solid green;
+
+    }
+
+
+   .presentacion__foto {
+
+      width: 450px;
+      border-radius: 3% !important;
+
+    }
+
+
+
+   footer {
+
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%; 
+      background-color: #f8f8f8;
+      padding: 10px 20px; 
+      display: flex;
+      justify-content: center;
+      box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 100; 
+
+    }
+  
+  footer button {
+      margin: 0 10px;
+    }
+
+}
