@@ -42,4 +42,25 @@ if (window.innerWidth < 1024) {
 
 
 
+/* Inyección de imagenes en la sección "Proyectos" en función del ancho de pantalla*/
 
+let imagenEncriptador = document.querySelector('#encriptador');
+window.addEventListener('resize', function() {
+
+    switch (true) {
+
+        case (window.innerWidth <= 425):
+            imagenEncriptador.src = './assets/Encriptador-vista-movil.jpg';
+            break;
+        case (window.innerWidth <= 768):
+            imagenEncriptador.src = './assets/Encriptador-vista-tablet.jpg';
+            break;
+        case (window.innerWidth <= 1024):
+            imagenEncriptador.src = './assets/Encriptador-vista-portatil.jpg';
+            break;
+        default:
+            imagenEncriptador.src = './assets/Encriptador-vista-web.jpg';
+            
+    }
+
+});
