@@ -467,11 +467,14 @@ textarea.contacto__campo::-webkit-scrollbar-thumb {
   
     }
 
+    /*--iconos de redes en "presentacion"--*/
+    .bi-github,
+    .bi-linkedin{
+        font-size: var(--Tamaño-texto-corto);
+     }
+
 /*Estoy resolviendo la parte de crear un slide con 
 las secciones del html con js */
 
-/*En la parte de proyectos esta un border detras de la 
-imagen que debo localizar en donde coloque eso y debo o 
-ocultar el color del borde o eliminar el borde*/
 
 }

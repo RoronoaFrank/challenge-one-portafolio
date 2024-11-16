@@ -34,9 +34,9 @@ if (window.innerWidth < 1024) {
       
     });
 
-} if (window.innerWidth >= 1024) {
+}  if (window.innerWidth >= 1024) {
 
-  menuNavegacion.classList.add('activar');
+        menuNavegacion.classList.add('activar');
 
 }
 
@@ -44,11 +44,11 @@ if (window.innerWidth < 1024) {
 
 /* Inyección de imagenes en la sección "Proyectos" en función del ancho de pantalla*/
 
-let imagenEncriptador = document.querySelector('#encriptador');
-window.addEventListener('resize', function() {
+function ajustarImagenes() {
+
+    let imagenEncriptador = document.querySelector('#encriptador');
 
     switch (true) {
-
         case (window.innerWidth <= 425):
             imagenEncriptador.src = './assets/Encriptador-vista-movil.jpg';
             break;
@@ -60,7 +60,12 @@ window.addEventListener('resize', function() {
             break;
         default:
             imagenEncriptador.src = './assets/Encriptador-vista-web.jpg';
-            
     }
+}
 
-});
+ajustarImagenes();
+
+window.addEventListener('resize', ajustarImagenes);
+
+//aca iniciaré el código de manipular el DOM para mostrar dinamicamente las secciones
+//tengo modificaciones pendientes pero meteré todo en el proximo commit donde comienzo este bloque de código
