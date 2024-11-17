@@ -19,6 +19,7 @@ if (window.innerWidth < 1024) {
       abrirMenuBtn.style.display = 'none';
       cerrarMenuBtn.style.display = 'flex';
       menuNavegacion.classList.add('activar');
+      //console.log('ejecución abrir correcta');
 
 
     });
@@ -68,4 +69,3 @@ ajustarImagenes();
 window.addEventListener('resize', ajustarImagenes);
 
 //aca iniciaré el código de manipular el DOM para mostrar dinamicamente las secciones
-//tengo modificaciones pendientes pero meteré todo en el proximo commit donde comienzo este bloque de código
