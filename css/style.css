@@ -680,7 +680,7 @@ textarea.contacto__campo::-webkit-scrollbar-thumb {
     /* ------------------- Sección Presentación ------------------- */
 
     .presentacion {
-        display: flex; /* Mostrar por defecto, puede cambiarse con eventos */
+        /*display: none; /* Mostrar por defecto, puede cambiarse con eventos */
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -709,7 +709,7 @@ textarea.contacto__campo::-webkit-scrollbar-thumb {
     /* ------------------- Sección Sobre mí ------------------- */
 
     .sobre-mi {
-        display: none; /* Habilitar con eventos */
+        /*display: none; /* Habilitar con eventos */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -734,7 +734,7 @@ textarea.contacto__campo::-webkit-scrollbar-thumb {
     .aficiones {
         width: 100%;
         height: 100%;
-        display: none; /* Habilitar con eventos */
+        /*display: none; /* Habilitar con eventos */
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -744,16 +744,16 @@ textarea.contacto__campo::-webkit-scrollbar-thumb {
 
     /* ------------------- Sección Proyectos ------------------- */
 
-    .proyectos {
-        display: none; /* Habilitar con eventos */
-    }
+    /*.proyectos {
+        /*display: none; /* Habilitar con eventos 
+    }*/
 
     /* ------------------- Sección Contacto ------------------- */
 
     .contacto {
         width: 100%;
         height: 100%;
-        display: none; /* Habilitar con eventos */
+        /*display: none; /* Habilitar con eventos */
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
@@ -774,6 +774,21 @@ textarea.contacto__campo::-webkit-scrollbar-thumb {
         display: flex;
         justify-content: center;
         gap: 3rem;
+    }
+
+    .navegacion__secciones button {
+        background-color: transparent;
+        border: 2px solid #333;
+        color: #333;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-family: var(--Subtitulos-texto), sans-serif;
+        transition: all 0.3s ease;
+    }
+    
+    .navegacion__secciones button:hover {
+        background-color: #333;
+        color: white;
     }
 }
 
