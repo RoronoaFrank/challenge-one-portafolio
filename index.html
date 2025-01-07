@@ -1,257 +1,334 @@
 <!DOCTYPE html>
 <html lang="es-mx">
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio como Frontend Developer. Información sobre mí, habilidades, aficiones y proyectos. Contáctame a través de formulario.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio como Frontend Developer. Información sobre mí, habilidades, aficiones y proyectos. Contáctame a través de formulario."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>Portafolio</title>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header class="cabecera">
+      <section class="nombre">
+        <img
+          class="nombre__logo"
+          src="assets/Logo FranckDev.svg"
+          alt="Una mano sostiene una varita mágica, de la que se eleva un humo azul pálido. En la parte superior del humo, hay tres estrellas pequeñas que flotan en el aire."
+        />
+        <h1 class="nombre__titulo" id="nombre">Franck Devv</h1>
+      </section>
 
+      <section class="menu" role="menu">
+        <div class="menu__botones">
+          <button
+            id="abrirMenu"
+            role="button"
+            class="menu__abrir"
+            aria-label="Abrir menú de navegación"
+          >
+            <i class="bi bi-caret-down-square-fill"></i>
+          </button>
+          <button
+            id="cerrarMenu"
+            role="button"
+            class="menu__cerrar"
+            aria-label="Cerrar menú de navegación"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
 
-        <section class="nombre">
-            <img class="nombre__logo" src="assets/Logo FranckDev.svg" alt="Una mano sostiene una varita mágica, de la que se eleva un humo azul pálido. En la parte superior del humo, hay tres estrellas pequeñas que flotan en el aire.">
-            <h1 class="nombre__titulo" id="nombre">Franck Devv</h1>
-        </section>
-
-        <section class="menu" role="menu">
-
-            <div class="menu__botones">
-
-                <button id="abrirMenu" role="button" class="menu__abrir" aria-label="Abrir menú de navegación">
-                    <i class="bi bi-caret-down-square-fill"></i>
-                </button>
-                <button id="cerrarMenu" role="button" class="menu__cerrar" aria-label="Cerrar menú de navegación">
-                    <i class="bi bi-x-lg"></i>
-                </button>
-
-            </div>
-
-            <nav class="menu__navegacion" role="navigation" aria-label="Menú de navegación">
-
-                <ul class="menu__lista">
-
-                    <li class="menu__elemento" role="listitem">
-                        <a href="#nombre">Presentación</a>
-                    </li>
-                    <li class="menu__elemento" role="listitem">
-                        <a href="#sobre-mi">Sobre mí</a>
-                    </li>
-                    <li class="menu__elemento" role="listitem">
-                        <a href="#habilidades">Habilidades</a>
-                    </li>
-                    <li class="menu__elemento" role="listitem">
-                        <a href="#aficiones">Aficiones</a>
-                    </li>
-                    <li class="menu__elemento" role="listitem">
-                        <a href="#proyectos">Proyectos</a>
-                    </li>
-                    <li class="menu__elemento" role="listitem">
-                        <a href="#contacto">Contacto</a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </section>
-       
-        
+        <nav
+          class="menu__navegacion"
+          role="navigation"
+          aria-label="Menú de navegación"
+        >
+          <ul class="menu__lista">
+            <li class="menu__elemento" role="listitem">
+              <a href="#nombre">Presentación</a>
+            </li>
+            <li class="menu__elemento" role="listitem">
+              <a href="#sobre-mi">Sobre mí</a>
+            </li>
+            <li class="menu__elemento" role="listitem">
+              <a href="#habilidades">Habilidades</a>
+            </li>
+            <li class="menu__elemento" role="listitem">
+              <a href="#aficiones">Aficiones</a>
+            </li>
+            <li class="menu__elemento" role="listitem">
+              <a href="#proyectos">Proyectos</a>
+            </li>
+            <li class="menu__elemento" role="listitem">
+              <a href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
     </header>
 
     <main class="seccion__main">
+      <!---------------Sección Presentación------------------->
 
-            <!---------------Sección Presentación------------------->
+      <section class="seccion presentacion" id="presentacion">
+        <img
+          class="presentacion__foto"
+          src="assets/Foto perfil portafolio.png"
+          alt="Foto de Franck tocandose el menton con la mano derecha mientras mira al frente, de fondo una oficina desenfocada con iluminacion blanca"
+        />
 
-            <section class="seccion presentacion" id="presentacion">
+        <article class="presentacion__contenedor">
+          <h2 class="presentacion__titulo">
+            Hola soy Franck! <br />
+            y construyo interfaces web
+          </h2>
+          <p class="presentacion__subtitulo">
+            Soy formado en... Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Debitis, at error atque laudantium officiis animi quasi ad,
+            quam aperiam, qui eos maiores soluta. Consequatur doloremque
+            laudantium dignissimos, doloribus iste maxime. y actualmente estoy
+            participando del proyecto Oracle ONE en Alura Latam.
+          </p>
 
+          <nav class="redes" aria-label="Redes sociales">
+            <ul class="redes__menu">
+              <li class="redes__img">
+                <a
+                  href="https://github.com/"
+                  aria-label="Perfil GitHub"
+                  title="Haz click para ir a mi GitHub"
+                >
+                  <i
+                    class="bi bi-github"
+                    id="github"
+                    tabindex="0"
+                    alt="Logo de GitHub"
+                  ></i>
+                </a>
+              </li>
+              <li class="redes__img">
+                <a
+                  href="https://www.linkedin.com/in/devfranciscocruzs"
+                  aria-label="Perfil LinkedIn"
+                  title="Haz click para ir a mi LinkedIn"
+                >
+                  <i
+                    class="bi bi-linkedin"
+                    id="linkedin"
+                    tabindex="0"
+                    alt="Logo LinkedIn"
+                  ></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </article>
 
-                <img class="presentacion__foto" src="assets/Foto perfil portafolio.png" alt="Foto de Franck tocandose el menton con la mano derecha mientras mira al frente, de fondo una oficina desenfocada con iluminacion blanca">
+        <div class="nav-buttons"></div>
+      </section>
 
-                <article class="presentacion__contenedor">
+      <!-----------------Sección Sobre mí--------------------->
 
-                    <h2 class="presentacion__titulo">Hola soy Franck! <br> y construyo interfaces web</h2>
-                    <p class="presentacion__subtitulo">Soy formado en... Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at error atque laudantium officiis animi quasi ad, quam aperiam, qui eos maiores soluta. Consequatur doloremque laudantium dignissimos, doloribus iste maxime. y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</p>
+      <section class="seccion sobre-mi" id="sobre-mi">
+        <h2 class="sobre-mi__titulo">Sobre mí</h2>
+        <p class="sobre-mi__texto">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam ab
+          laudantium aut nam ut maxime excepturi culpa atque dolor? Facilis
+          maxime dolorum suscipit odit! Suscipit tenetur ducimus et, totam
+          ipsam, vitae consectetur molestias distinctio itaque magni, voluptates
+          perspiciatis? Sequi totam nobis tenetur laborum. Eum harum debitis
+          quia aliquam at natus!
+        </p>
+        <p class="sobre-mi__texto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          velit velit, volutpat semper dignissim dictum, imperdiet ut lacus.
+          Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper
+          sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas
+          metus vitae, aliquet metus.
+        </p>
+        <img
+          class="sobre-mi__firma"
+          src="assets/signature.png"
+          alt="Firma autografa profesional"
+        />
+      </section>
 
-                    <nav class="redes" aria-label="Redes sociales">
+      <!----------------Sección Habilidades ------------------>
 
-                        <ul class="redes__menu">
+      <section class="seccion habilidades" id="habilidades">
+        <h2 class="habilidades__titulo">Habilidades</h2>
+        <ul class="habilidades__lista" role="list">
+          <li
+            class="habilidades__elemento"
+            aria-label="Experiencia en desarrollo web con HTML"
+          >
+            <i class="bi bi-filetype-html" alt="Icono de HTML"></i>
+          </li>
+          <li
+            class="habilidades__elemento"
+            aria-label="Experiencia en desarrollo web con JavaScript"
+          >
+            <i class="bi bi-filetype-js" alt="Icono de JavaScript"></i>
+          </li>
+          <li
+            class="habilidades__elemento"
+            aria-label="Experiencia en desarrollo web con CSS"
+          >
+            <i class="bi bi-filetype-css" alt="Icono de CSS"></i>
+          </li>
+        </ul>
+      </section>
 
-                            <li class="redes__img">
-                                <a href="https://github.com/" aria-label="Perfil GitHub" title="Haz click para ir a mi GitHub">
-                                    <i class="bi bi-github" id="github" tabindex="0" alt="Logo de GitHub"></i>
-                                </a>
-                            </li>
-                            <li class="redes__img">
-                                <a href="https://www.linkedin.com/in/devfranciscocruzs" aria-label="Perfil LinkedIn" title="Haz click para ir a mi LinkedIn">
-                                    <i class="bi bi-linkedin" id="linkedin" tabindex="0" alt="Logo LinkedIn"></i>
-                                </a>
-                            </li>
+      <!------------------Sección Aficiones------------------->
 
-                        </ul>
+      <section class="seccion aficiones" id="aficiones">
+        <h2 class="aficiones__titulo">Aficiones</h2>
+        <ul class="aficiones__lista" role="list">
+          <li class="aficiones__elemento">
+            <span
+              class="material-symbols-outlined"
+              aria-label="Icono de una pieza de ajedrez que representa al rey"
+              >chess</span
+            >
+            <p class="aficiones__nombre">Ajedrez</p>
+          </li>
+          <li class="aficiones__elemento">
+            <span
+              class="material-symbols-outlined"
+              aria-label="Icono de asador en funcionamiento"
+              >outdoor_grill</span
+            >
+            <p class="aficiones__nombre">Cocinar</p>
+          </li>
+          <li class="aficiones__elemento">
+            <span
+              class="material-symbols-outlined"
+              aria-label="Icono de libros de biblioteca"
+              >library_books</span
+            >
+            <p class="aficiones__nombre">Leer</p>
+          </li>
+          <li class="aficiones__elemento">
+            <span
+              class="material-symbols-outlined"
+              aria-label="Icono de un humano moviendose"
+              >emoji_people</span
+            >
+            <p class="aficiones__nombre">Bailar</p>
+          </li>
+        </ul>
+      </section>
 
-                    </nav>
+      <!----------------Sección de Proyectos------------------>
 
-                </article>
+      <section class="seccion proyectos" id="proyectos">
+        <h2 class="proyectos__titulo">Proyectos</h2>
+        <div class="proyectos__contenedor">
+          <h3 class="proyectos__nombre">Encriptador de texto</h3>
+          <figure class="proyectos__enlace">
+            <a
+              class="proyectos__enlace__desplegado"
+              href="https://one-challenges.vercel.app/"
+              target="_blank"
+              aria-label="Abrir el proyecto Encriptador de texto en una nueva ventana"
+            >
+              <img
+                class="proyectos__imagen"
+                id="encriptador"
+                src=""
+                alt="Vista previa del proyecto Encriptador de texto"
+                title="Haz click sobre la imagen para probar el proyecto"
+              />
+            </a>
+            <figcaption class="proyectos__pie__imagen">
+              Puedes revisar el código del proyecto<br />
+              <span
+                >ingresando a<a
+                  class="proyectos__enlace__github"
+                  href="https://github.com/RoronoaFrank/one-challenges.git"
+                  target="_blank"
+                >
+                  mi repositorio en GitHub</a
+                ></span
+              >
+            </figcaption>
+          </figure>
+          <p class="proyectos__descripcion">
+            Esta aplicación fue desarrollada con el objetivo principal de
+            encriptar y desencriptar texto para proteger mensajes de manera
+            segura. Utiliza un método simple de encriptación basado en la
+            sustitución de vocales por conjuntos específicos de caracteres,
+            generando así un texto que resulta indescifrable para quien no posea
+            las claves de desencriptación.
+          </p>
+        </div>
+      </section>
 
-                <div class="nav-buttons">
-                    
-                </div>
+      <!-----------------Sección de Contacto------------------>
 
-
-            </section>
-
-
-            <!-----------------Sección Sobre mí--------------------->
-
-            <section class="seccion sobre-mi" id="sobre-mi">
-
-
-                <h2 class="sobre-mi__titulo">Sobre mí</h2>
-                <p class="sobre-mi__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam ab laudantium aut nam ut maxime excepturi culpa atque dolor? Facilis maxime dolorum suscipit odit! Suscipit tenetur ducimus et, totam ipsam, vitae consectetur molestias distinctio itaque magni, voluptates perspiciatis? Sequi totam nobis tenetur laborum. Eum harum debitis quia aliquam at natus!</p>
-                <p class="sobre-mi__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
-                <img class="sobre-mi__firma" src="assets/signature.png" alt="Firma autografa profesional">
-
-
-            </section>
-
-
-
-        
-            <!----------------Sección Habilidades ------------------>
-
-            <section class="seccion habilidades" id="habilidades">
-
-
-                <h2 class="habilidades__titulo">Habilidades</h2>
-                <ul class="habilidades__lista" role="list">
-
-                    <li class="habilidades__elemento" aria-label="Experiencia en desarrollo web con HTML">
-                        <i class="bi bi-filetype-html" alt="Icono de HTML"></i>
-                    </li>
-                    <li class="habilidades__elemento" aria-label="Experiencia en desarrollo web con JavaScript">
-                        <i class="bi bi-filetype-js" alt="Icono de JavaScript"></i>
-                    </li>
-                    <li class="habilidades__elemento" aria-label="Experiencia en desarrollo web con CSS">
-                        <i class="bi bi-filetype-css" alt="Icono de CSS"></i>
-                    </li>
-
-                </ul>
-
-
-            </section>
-
-
-            <!------------------Sección Aficiones------------------->
-
-            <section class="seccion aficiones" id="aficiones">
-
-
-                <h2 class="aficiones__titulo">Aficiones</h2>
-                <ul class="aficiones__lista" role="list">
-                    
-                    <li class="aficiones__elemento">
-                        <span class="material-symbols-outlined" aria-label="Icono de una pieza de ajedrez que representa al rey">chess</span>   
-                        <p class="aficiones__nombre">Ajedrez</p>
-                    </li>
-                    <li class="aficiones__elemento">
-                        <span class="material-symbols-outlined" aria-label="Icono de asador en funcionamiento">outdoor_grill</span>
-                        <p class="aficiones__nombre">Cocinar</p>
-                    </li>
-                    <li class="aficiones__elemento">
-                        <span class="material-symbols-outlined" aria-label="Icono de libros de biblioteca">library_books</span>
-                        <p class="aficiones__nombre">Leer</p>
-                    </li>
-                    <li class="aficiones__elemento">
-                        <span class="material-symbols-outlined" aria-label="Icono de un humano moviendose">emoji_people</span>
-                        <p class="aficiones__nombre">Bailar</p>
-                    </li>
-
-                </ul>
-
-
-            </section>
-
-
-
-            <!----------------Sección de Proyectos------------------>
-
-            <section class="seccion proyectos" id="proyectos">
-
-
-                <h2 class="proyectos__titulo">Proyectos</h2>
-                <div class="proyectos__contenedor">
-
-                    <h3 class="proyectos__nombre">Encriptador de texto</h3>
-                    <figure class="proyectos__enlace">
-
-                        <a class="proyectos__enlace__desplegado" href="https://one-challenges.vercel.app/" target="_blank" aria-label="Abrir el proyecto Encriptador de texto en una nueva ventana">
-                            <img class="proyectos__imagen" id="encriptador" src="" alt="Vista previa del proyecto Encriptador de texto" title="Haz click sobre la imagen para probar el proyecto">
-                        </a>
-                        <figcaption class="proyectos__pie__imagen">Puedes revisar el código del proyecto<br>
-                            <span>ingresando a<a class="proyectos__enlace__github" href="https://github.com/RoronoaFrank/one-challenges.git" target="_blank"> mi repositorio en GitHub</a></span>
-                        </figcaption>
-
-                    </figure>
-                    <p class="proyectos__descripcion">Esta aplicación fue desarrollada con el objetivo principal de encriptar y desencriptar texto para proteger mensajes de manera segura. Utiliza un método simple de encriptación basado en la sustitución de vocales por conjuntos específicos de caracteres, generando así un texto que resulta indescifrable para quien no posea las claves de desencriptación.</p>
-                    
-                </div>
-
-            
-            </section>
-
-
-            <!-----------------Sección de Contacto------------------>
-
-            <section class="seccion contacto" id="contacto">
-
-
-                <h2 class="contacto__titulo">Contacto</h2>
-                <form class="contacto__formulario" id="contactForm">
-
-                    <fieldset class="contacto__fielset">
-
-                        <legend class="contacto__legend">Envíame un mensaje:</legend>
-                        <input class="contacto__campo" type="text" name="nombre" placeholder="Ingresa tu nombre" aria-label="Ej: Juan Pérez" required>
-                        <input class="contacto__campo" type="email" name="email" placeholder="Ingresa tu correo" aria-label="tucorreo@ejemplo.com" required>
-                        <textarea class="contacto__campo" type="menssage" name="mensaje" placeholder="Dejame tu mensaje" required></textarea>
-                        <p class="error__info" id="error-message"></p>
-                        <button class="contacto__boton" type="submit">Enviar</button>
-
-                    </fieldset>
-
-                </form>
-
-
-            </section>
-
+      <section class="seccion contacto" id="contacto">
+        <h2 class="contacto__titulo">Contacto</h2>
+        <form class="contacto__formulario" id="contactForm">
+          <fieldset class="contacto__fielset">
+            <legend class="contacto__legend">Envíame un mensaje:</legend>
+            <input
+              class="contacto__campo"
+              type="text"
+              name="nombre"
+              placeholder="Ingresa tu nombre"
+              aria-label="Ej: Juan Pérez"
+              required
+            />
+            <input
+              class="contacto__campo"
+              type="email"
+              name="email"
+              placeholder="Ingresa tu correo"
+              aria-label="tucorreo@ejemplo.com"
+              required
+            />
+            <textarea
+              class="contacto__campo"
+              type="menssage"
+              name="mensaje"
+              placeholder="Dejame tu mensaje"
+              required
+            ></textarea>
+            <p class="error__info" id="error-message"></p>
+            <button class="contacto__boton" type="submit">Enviar</button>
+          </fieldset>
+        </form>
+      </section>
     </main>
 
     <footer>
-
-        <div class="navegacion__secciones">
-            <button data-direccion="prev">Anterior</button>
-            <button data-direccion="next">Siguiente</button>
-        </div>
-
+      <div class="navegacion__secciones">
+        <button data-direccion="prev">Anterior</button>
+        <button data-direccion="next">Siguiente</button>
+      </div>
     </footer>
 
-
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

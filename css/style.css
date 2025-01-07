@@ -1,794 +1,792 @@
 :root {
-    /* Paleta de colores */
-    --color-fondo: rgb(240, 240, 240); /* Fondo claro */
-    --color-texto-titulo: rgb(51, 51, 51); /* Texto principal */
-    --color-subtitulo: rgb(102, 102, 102); /* Subtítulos */
-    --color-texto-secundario: rgb(153, 153, 153); /* Texto secundario */
+  /* Paleta de colores */
+  --color-fondo: rgb(240, 240, 240); /* Fondo claro */
+  --color-texto-titulo: rgb(51, 51, 51); /* Texto principal */
+  --color-subtitulo: rgb(102, 102, 102); /* Subtítulos */
+  --color-texto-secundario: rgb(153, 153, 153); /* Texto secundario */
 
-    /* Tipografía */
-    --Titulos-principales: 'Playfair Display SC';
-    --Subtitulos-texto: 'Montserrat';
-    --Elementos-decorativos: 'Dancing Script';
+  /* Tipografía */
+  --Titulos-principales: "Playfair Display SC";
+  --Subtitulos-texto: "Montserrat";
+  --Elementos-decorativos: "Dancing Script";
 
-    --Peso-titulos: 900;
-    --Peso-subtitulos-textos: 400;
-    --Peso-elementos-decorativos: 400;
+  --Peso-titulos: 900;
+  --Peso-subtitulos-textos: 400;
+  --Peso-elementos-decorativos: 400;
 
-    /* Tamaños de texto */
-    --Tamaño-titulo-out: 2.25rem;
-    --Tamaño-titulo-in: 2.25rem;
-    --Tamaño-subtitulo: 1.7rem;
-    --Tamaño-texto: 0.9rem;
-    --Tamaño-texto-corto: 1.3rem;
+  /* Tamaños de texto */
+  --Tamaño-titulo-out: 2.25rem;
+  --Tamaño-titulo-in: 2.25rem;
+  --Tamaño-subtitulo: 1.7rem;
+  --Tamaño-texto: 0.9rem;
+  --Tamaño-texto-corto: 1.3rem;
 }
 
 body {
-    background-color: var(--color-fondo);
+  background-color: var(--color-fondo);
 }
 
 /* Enfoque First Mobile */
 
 /* ------------------- Cabecera ------------------- */
 .cabecera {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
 }
 
 .nombre {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .nombre__logo {
-    width: 200px;
-    height: 100px;
+  width: 200px;
+  height: 100px;
 }
 
 .nombre__titulo {
-    font-family: var(--Titulos-principales);
-    font-size: var(--Tamaño-titulo-out);
-    font-weight: var(--Peso-titulos);
-    color: var(--color-texto-titulo);
+  font-family: var(--Titulos-principales);
+  font-size: var(--Tamaño-titulo-out);
+  font-weight: var(--Peso-titulos);
+  color: var(--color-texto-titulo);
 }
 
 /* Menú */
 .menu {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    gap: 10px;
-    padding: 10px;
-    transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  gap: 10px;
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu__botones {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .menu__abrir,
 .menu__cerrar {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 .menu__abrir:focus,
 .menu__cerrar:focus {
-    outline: 1px solid var(--color-fondo);
+  outline: 1px solid var(--color-fondo);
 }
 
 .bi-caret-down-square-fill,
 .bi-x-lg {
-    color: var(--color-texto-titulo);
-    font-size: 2rem;
+  color: var(--color-texto-titulo);
+  font-size: 2rem;
 }
 
 .menu__lista,
 .menu__cerrar {
-    display: none;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
 }
 
 .menu__navegacion {
-    border-radius: 3%;
-    padding: 15px;
-    position: relative;
-    z-index: 1;
+  border-radius: 3%;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
 }
 
 .menu__navegacion.activar::after {
-    background-color: rgba(51, 51, 51, 0.7);
-    border-radius: 3%;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
+  background-color: rgba(51, 51, 51, 0.7);
+  border-radius: 3%;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .menu__lista,
 .menu__lista a {
-    font-family: var(--Subtitulos-texto);
-    list-style-type: none;
-    text-decoration: none;
-    color: var(--color-fondo);
+  font-family: var(--Subtitulos-texto);
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--color-fondo);
 }
 
 li.menu__elemento:hover,
 li.menu__elemento:focus {
-    outline: 2px solid var(--color-fondo);
+  outline: 2px solid var(--color-fondo);
 }
 
 /* ------------------- Sección Presentación ------------------- */
 
 /* Estructura */
 .presentacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 .presentacion__contenedor {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.56rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.56rem;
 }
 
 /* Tipografía */
 .presentacion__titulo {
-    display: flex;
-    text-align: center;
-    white-space: pre-line;
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-subtitulo);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-subtitulo);
+  display: flex;
+  text-align: center;
+  white-space: pre-line;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-subtitulo);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-subtitulo);
 }
 
 .presentacion__subtitulo {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-texto);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-texto-titulo);
-    line-height: 1.6;
-    padding: 0 1.25rem;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-texto);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-texto-titulo);
+  line-height: 1.6;
+  padding: 0 1.25rem;
 }
 
 /* Estilo de la foto */
 .presentacion__foto {
-    border-radius: 50%;
-    box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
-    width: 350px;
+  border-radius: 50%;
+  box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
+  width: 350px;
 }
 
 /* Redes sociales */
 .redes__menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 5rem;
-    list-style-type: none;
-    text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 .redes__menu a {
-    list-style-type: none;
-    text-decoration: none;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 .bi-github,
 .bi-linkedin {
-    color: var(--color-texto-titulo);
-    font-size: 3.5rem;
+  color: var(--color-texto-titulo);
+  font-size: 3.5rem;
 }
 
 /* ------------------- Sección Sobre mí ------------------- */
 
 /* Estructura */
 .sobre-mi {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1.25rem;
-    padding: 1.7rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.25rem;
+  padding: 1.7rem;
 }
 
 .sobre-mi__firma {
-    width: 15rem;
-    height: 7rem;
-    align-self: center;
+  width: 15rem;
+  height: 7rem;
+  align-self: center;
 }
 
 /* Tipografía */
 .sobre-mi__titulo {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-subtitulo);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-subtitulo);
-    line-height: 1.6;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-subtitulo);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-subtitulo);
+  line-height: 1.6;
 }
 
 .sobre-mi__texto {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-texto);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-texto-titulo);
-    line-height: 1.6;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-texto);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-texto-titulo);
+  line-height: 1.6;
 }
-
 
 /* ------------------- Sección Habilidades ------------------- */
 
 .habilidades {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.875rem;
-    margin-bottom: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  margin-bottom: 1.5625rem;
 }
 
 .habilidades__titulo {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-subtitulo);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-texto-titulo);
-    line-height: 1.6;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-subtitulo);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-texto-titulo);
+  line-height: 1.6;
 }
 
 .habilidades__lista {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 6.25rem;
-    padding: 0 0.9rem;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6.25rem;
+  padding: 0 0.9rem;
+  list-style-type: none;
 }
 
 .bi-filetype-html,
 .bi-filetype-js,
 .bi-filetype-css {
-    font-size: 3.5rem;
-    color: var(--color-texto-titulo);
+  font-size: 3.5rem;
+  color: var(--color-texto-titulo);
 }
 
 /* ------------------- Sección Aficiones ------------------- */
 
 .aficiones {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5625rem;
 }
 
 .aficiones__titulo {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-subtitulo);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-texto-titulo);
-    line-height: 1.6;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-subtitulo);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-texto-titulo);
+  line-height: 1.6;
 }
 
 .aficiones__lista {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2.8rem;
-    padding: 0 0.9rem;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2.8rem;
+  padding: 0 0.9rem;
+  list-style-type: none;
 }
 
 .aficiones__elemento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.9375rem;
-    margin-bottom: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9375rem;
+  margin-bottom: 1.5625rem;
 }
 
 .aficiones__nombre {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-texto-corto);
-    color: var(--color-texto-titulo);
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-texto-corto);
+  color: var(--color-texto-titulo);
 }
 
 .material-symbols-outlined {
-    font-size: 3.5rem;
-    color: var(--color-texto-titulo);
+  font-size: 3.5rem;
+  color: var(--color-texto-titulo);
 }
 
 /* ------------------- Sección Proyectos ------------------- */
 
 .proyectos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
 }
- 
+
 .proyectos__contenedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
 }
- 
+
 .proyectos__enlace {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5625rem;
 }
- 
+
 .proyectos__enlace__desplegado {
-    width: 80%;
-    display: flex;
-    justify-content: center;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
- 
+
 .proyectos__imagen {
-    width: 100%;
-    border-radius: 1%;
-    box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  border-radius: 1%;
+  box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
 }
- 
+
 .proyectos__enlace__github:focus {
-    outline: 1px solid var(--color-texto-titulo);
-    border-radius: 25%;
+  outline: 1px solid var(--color-texto-titulo);
+  border-radius: 25%;
 }
- 
+
 .proyectos__pie__imagen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
- 
- 
+
 /* Títulos y Descripciones de Proyectos */
- 
+
 .proyectos__titulo {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-subtitulo);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-texto-titulo);
-    line-height: 1.6;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-subtitulo);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-texto-titulo);
+  line-height: 1.6;
 }
- 
+
 .proyectos__nombre {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-texto-corto);
-    font-weight: var(--Peso-elementos-decorativos);
-    color: var(--color-subtitulo);
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-texto-corto);
+  font-weight: var(--Peso-elementos-decorativos);
+  color: var(--color-subtitulo);
 }
- 
+
 .proyectos__indicacion,
 .proyectos__pie__imagen {
-    font-family: var(--Elementos-decorativos);
-    font-size: var(--Tamaño-texto-corto);
-    color: var(--color-texto-titulo);
-    line-height: 1.5;
+  font-family: var(--Elementos-decorativos);
+  font-size: var(--Tamaño-texto-corto);
+  color: var(--color-texto-titulo);
+  line-height: 1.5;
 }
- 
+
 .proyectos__enlace__github {
-    text-decoration: none;
-    color: var(--color-texto-secundario);
+  text-decoration: none;
+  color: var(--color-texto-secundario);
 }
- 
+
 .proyectos__descripcion {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-texto);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-texto-titulo);
-    padding: 20px;
-    line-height: 1.6;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-texto);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-texto-titulo);
+  padding: 20px;
+  line-height: 1.6;
 }
 
 /* ------------------- Sección Contacto ------------------- */
 
 /* Estructura de la Sección de Contacto */
 .contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
 }
- 
+
 .contacto__formulario {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
- 
+
 .contacto__fielset {
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
- 
+
 footer {
-    display: none;
+  display: none;
 }
- 
- 
+
 /* Títulos y Leyendas */
 .contacto__titulo {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-subtitulo);
-    font-weight: var(--Peso-subtitulos-textos);
-    color: var(--color-subtitulo);
-    align-self: flex-start;
-    padding-left: 1rem;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-subtitulo);
+  font-weight: var(--Peso-subtitulos-textos);
+  color: var(--color-subtitulo);
+  align-self: flex-start;
+  padding-left: 1rem;
 }
- 
+
 .contacto__legend {
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-texto);
-    margin-bottom: 1rem;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-texto);
+  margin-bottom: 1rem;
 }
- 
- 
+
 /* Campos del Formulario */
 .contacto__campo {
-    font-family: var(--Elementos-decorativos);
-    font-size: var(--Tamaño-texto-corto);
-    font-weight: var(--Peso-elementos-decorativos);
-    line-height: 1.6;
-    border: .1rem solid var(--color-subtitulo);
-    border-radius: .2rem;
+  font-family: var(--Elementos-decorativos);
+  font-size: var(--Tamaño-texto-corto);
+  font-weight: var(--Peso-elementos-decorativos);
+  line-height: 1.6;
+  border: 0.1rem solid var(--color-subtitulo);
+  border-radius: 0.2rem;
 }
- 
+
 textarea.contacto__campo {
-    height: 15rem;
-    outline: none;
-    resize: none;
+  height: 15rem;
+  outline: none;
+  resize: none;
 }
- 
+
 textarea.contacto__campo::-webkit-scrollbar {
-    width: .5rem;
-    border-radius: .5rem;
+  width: 0.5rem;
+  border-radius: 0.5rem;
 }
- 
+
 textarea.contacto__campo::-webkit-scrollbar-thumb {
-    background-color: var(--color-subtitulo);
-    border-radius: .5rem;
+  background-color: var(--color-subtitulo);
+  border-radius: 0.5rem;
 }
- 
- 
+
 /* Botón de Envío */
 .contacto__boton {
-    align-self: center;
-    width: 80%;
-    font-family: var(--Subtitulos-texto);
-    font-size: var(--Tamaño-texto);
-    border: .1rem solid var(--color-subtitulo);
-    border-radius: .2rem;
+  align-self: center;
+  width: 80%;
+  font-family: var(--Subtitulos-texto);
+  font-size: var(--Tamaño-texto);
+  border: 0.1rem solid var(--color-subtitulo);
+  border-radius: 0.2rem;
 }
- 
+
 .contacto__boton:hover {
-    background-color: var(--color-texto-titulo);
-    color: var(--color-fondo);
+  background-color: var(--color-texto-titulo);
+  color: var(--color-fondo);
 }
 
 /* ------------------- Vista en tablet ------------------- */
 /* Estilos para pantallas con un ancho mínimo de 768px */
 
 @media (min-width: 768px) {
+  /* ------------------- Header ------------------- */
 
-    /* ------------------- Header ------------------- */
+  .nombre__logo {
+    width: 250px;
+    height: 150px;
+  }
 
-    .nombre__logo {
-        width: 250px;
-        height: 150px;
-    }
+  .menu {
+    gap: 20px;
+  }
 
-    .menu {
-        gap: 20px;
-    }
+  .menu__lista {
+    gap: 35px;
+  }
 
-    .menu__lista {
-        gap: 35px;
-    }
+  /* ------------------- Sección Presentación ------------------- */
 
-    /* ------------------- Sección Presentación ------------------- */
+  .presentacion {
+    padding-top: 20px;
+  }
 
-    .presentacion {
-        padding-top: 20px;
-    }
+  .presentacion__contenedor {
+    gap: 2.8rem;
+  }
 
-    .presentacion__contenedor {
-        gap: 2.8rem;
-    }
+  .presentacion__foto {
+    width: 350px;
+    border-radius: 40%;
+    box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
+  }
 
-    .presentacion__foto {
-        width: 350px;
-        border-radius: 40%;
-        box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
-    }
+  .presentacion__subtitulo {
+    width: 90%;
+    padding: 0 3rem;
+  }
 
-    .presentacion__subtitulo {
-        width: 90%;
-        padding: 0 3rem;
-    }
+  .redes__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15rem;
+  }
 
-    .redes__menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 15rem;
-    }
+  /* ------------------- Sección Sobre mí ------------------- */
 
-    /* ------------------- Sección Sobre mí ------------------- */
+  .sobre-mi {
+    gap: 2rem;
+    padding: 3.5rem;
+  }
 
-    .sobre-mi {
-        gap: 2rem;
-        padding: 3.5rem;
-    }
+  .sobre-mi__texto {
+    width: 90%;
+    align-self: center;
+  }
 
-    .sobre-mi__texto {
-        width: 90%;
-        align-self: center;
-    }
+  /* ------------------- Sección Habilidades ------------------- */
 
-    /* ------------------- Sección Habilidades ------------------- */
+  .habilidades {
+    margin-bottom: 5rem;
+  }
 
-    .habilidades {
-        margin-bottom: 5rem;
-    }
+  .habilidades__lista {
+    gap: 10rem;
+    padding: 0;
+  }
 
-    .habilidades__lista {
-        gap: 10rem;
-        padding: 0;
-    }
+  /* ------------------- Sección Aficiones ------------------- */
 
-    /* ------------------- Sección Aficiones ------------------- */
+  .aficiones {
+    margin-bottom: 3rem;
+  }
 
-    .aficiones {
-        margin-bottom: 3rem;
-    }
+  .aficiones__lista {
+    gap: 6rem;
+    padding: 0;
+  }
 
-    .aficiones__lista {
-        gap: 6rem;
-        padding: 0;
-    }
+  .material-symbols-outlined {
+    font-size: 4.5rem;
+    color: var(--color-texto-titulo);
+  }
 
-    .material-symbols-outlined {
-        font-size: 4.5rem;
-        color: var(--color-texto-titulo);
-    }
+  /* ------------------- Sección Proyectos ------------------- */
 
-    /* ------------------- Sección Proyectos ------------------- */
+  .proyectos {
+    gap: 2.5rem;
+    margin-bottom: 1rem;
+  }
 
-    .proyectos {
-        gap: 2.5rem;
-        margin-bottom: 1rem;
-    }
+  .proyectos__contenedor {
+    gap: 2rem;
+  }
 
-    .proyectos__contenedor {
-        gap: 2rem;
-    }
+  .proyectos__imagen {
+    width: 650px;
+    align-items: center;
+  }
 
-    .proyectos__imagen {
-        width: 650px;
-        align-items: center;
-    }
+  .proyectos__descripcion {
+    width: 85%;
+  }
 
-    .proyectos__descripcion {
-        width: 85%;
-    }
+  /* ------------------- Sección Contacto ------------------- */
 
-    /* ------------------- Sección Contacto ------------------- */
-
-    .contacto {
-        padding: 2.5rem;
-    }
+  .contacto {
+    padding: 2.5rem;
+  }
 }
 
 /* ------------------- Vista en portátil ------------------- */
 /* Estilos para pantallas con un ancho mínimo de 1024px */
 
 @media (min-width: 1024px) {
+  /* ------------------- Estructura general ------------------- */
 
-    /* ------------------- Estructura general ------------------- */
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-    body {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+  /* ------------------- Header ------------------- */
 
-    /* ------------------- Header ------------------- */
+  .cabecera {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
 
-    .cabecera {
-        height: 10%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        margin: 0;
-    }
+  .nombre {
+    height: 100%;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 1%;
+  }
 
-    .nombre {
-        height: 100%;
-        flex-direction: row;
-        gap: 20px;
-        margin-left: 1%;
-    }
+  .nombre__logo {
+    width: 50px;
+  }
 
-    .nombre__logo {
-        width: 50px;
-    }
+  .nombre__titulo {
+    font-size: 1.5rem;
+  }
 
-    .nombre__titulo {
-        font-size: 1.5rem;
-    }
+  /* ------------------- Menú ------------------- */
 
-    /* ------------------- Menú ------------------- */
-    
-    .menu {
-        position: static;
-    }
+  .menu {
+    position: static;
+  }
 
-    .menu__botones {
-        display: none;
-    }
+  .menu__botones {
+    display: none;
+  }
 
-    .menu__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
+  .menu__lista {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 
-    .menu__elemento a {
-        display: flex;
-        white-space: nowrap;
-        font-size: 0.8rem;
-    }
+  .menu__elemento a {
+    display: flex;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
 
-    /* ------------------- Sección Principal ------------------- */
+  /* ------------------- Sección Principal ------------------- */
 
-    .seccion__main {
-        width: 100vw;
-        height: 80%;
-        display: flex;
-        flex-wrap: nowrap;
-    }
+  .seccion__main {
+    width: 100vw;
+    height: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
 
-    /* ------------------- Sección Presentación ------------------- */
+  /* ------------------- Sección Presentación ------------------- */
 
-    .presentacion {
-        /*display: none; /* Mostrar por defecto, puede cambiarse con eventos */
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        gap: 0;
-        padding: 3%;
-    }
+  .presentacion {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
+    padding: 3%;
+  }
 
-    .presentacion__foto {
-        border-radius: 3%;
-    }
+  .presentacion__foto {
+    border-radius: 3%;
+  }
 
-    .presentacion__contenedor {
-        height: 350px;
-    }
+  .presentacion__contenedor {
+    height: 350px;
+  }
 
-    .redes__menu {
-        justify-content: center;
-        gap: 3rem;
-    }
+  .redes__menu {
+    justify-content: center;
+    gap: 3rem;
+  }
 
-    .bi-github,
-    .bi-linkedin {
-        font-size: var(--Tamaño-titulo-out);
-    }
+  .bi-github,
+  .bi-linkedin {
+    font-size: var(--Tamaño-titulo-out);
+  }
 
-    /* ------------------- Sección Sobre mí ------------------- */
+  /* ------------------- Sección Sobre mí ------------------- */
 
-    .sobre-mi {
-        /*display: none; /* Habilitar con eventos */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-    }
+  .sobre-mi {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
 
-    /* ------------------- Sección Habilidades ------------------- */
+  /* ------------------- Sección Habilidades ------------------- */
 
-    .habilidades {
-        width: 100%;
-        height: 100%;
-        display: none; /* Habilitar con eventos */
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 12rem;
-        padding: 3%;
-    }
+  .habilidades {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12rem;
+    padding: 3%;
+  }
 
-    /* ------------------- Sección Aficiones ------------------- */
+  /* ------------------- Sección Aficiones ------------------- */
 
-    .aficiones {
-        width: 100%;
-        height: 100%;
-        /*display: none; /* Habilitar con eventos */
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 12rem;
-        padding: 3%;
-    }
+  .aficiones {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12rem;
+    padding: 3%;
+  }
 
-    /* ------------------- Sección Proyectos ------------------- */
+  /* ------------------- Sección Proyectos ------------------- */
 
-    /*.proyectos {
-        /*display: none; /* Habilitar con eventos 
-    }*/
+  section.proyectos::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  section.proyectos::-webkit-scrollbar-thumb {
+    background-color: var(--color-subtitulo);
+    border-radius: 0.5rem;
+  }
 
-    /* ------------------- Sección Contacto ------------------- */
+  .proyectos {
+    height: auto;
+    overflow-y: scroll;
+  }
 
-    .contacto {
-        width: 100%;
-        height: 100%;
-        /*display: none; /* Habilitar con eventos */
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 3%;
-    }
+  /* ------------------- Sección Contacto ------------------- */
 
-    /* ------------------- Footer ------------------- */
+  .contacto {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3%;
+  }
 
-    footer {
-        width: 100%;
-        height: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  /* ------------------- Footer ------------------- */
 
-    .navegacion__secciones {
-        display: flex;
-        justify-content: center;
-        gap: 3rem;
-    }
+  footer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .navegacion__secciones button {
-        background-color: transparent;
-        border: 2px solid #333;
-        color: #333;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-family: var(--Subtitulos-texto), sans-serif;
-        transition: all 0.3s ease;
-    }
-    
-    .navegacion__secciones button:hover {
-        background-color: #333;
-        color: white;
-    }
+  .navegacion__secciones {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .navegacion__secciones button {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: var(--Subtitulos-texto), sans-serif;
+    transition: all 0.3s ease;
+  }
+
+  .navegacion__secciones button:hover {
+    background-color: #333;
+    color: white;
+  }
 }
-
