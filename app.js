@@ -51,7 +51,7 @@ window.addEventListener("resize", () => {
     mostrarSeccion(indiceActual); // En desktop, mantener el slide activo
   } else {
     secciones.forEach((seccion) => {
-      seccion.style.display = "block"; // Mostrar todas las secciones en móvil
+      seccion.style.display = "flex"; // Mostrar todas las secciones en móvil
     });
   }
 });

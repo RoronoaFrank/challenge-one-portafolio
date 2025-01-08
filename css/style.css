@@ -170,9 +170,10 @@ li.menu__elemento:focus {
 
 /* Estilo de la foto */
 .presentacion__foto {
+  align-self: center;
   border-radius: 50%;
   box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
-  width: 350px;
+  width: 80%;
 }
 
 /* Redes sociales */
@@ -239,11 +240,12 @@ li.menu__elemento:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.875rem;
   margin-bottom: 1.5625rem;
+  gap: 2rem;
 }
 
 .habilidades__titulo {
+  align-self: center;
   font-family: var(--Subtitulos-texto);
   font-size: var(--Tamaño-subtitulo);
   font-weight: var(--Peso-subtitulos-textos);
@@ -253,32 +255,40 @@ li.menu__elemento:focus {
 
 .habilidades__lista {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 6.25rem;
+  gap: 2.5rem;
   padding: 0 0.9rem;
   list-style-type: none;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .bi-filetype-html,
 .bi-filetype-js,
-.bi-filetype-css {
+.bi-filetype-css,
+.bi-filetype-jsx,
+.bi-git,
+.bi-github {
   font-size: 3.5rem;
   color: var(--color-texto-titulo);
 }
 
 /* ------------------- Sección Aficiones ------------------- */
+/*Este contenedor es el que hay que ajustar para que no se desborden los iconos en la version movil*/
 
 .aficiones {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.25rem;
   margin-bottom: 1.5625rem;
 }
 
 .aficiones__titulo {
+  justify-content: center;
   font-family: var(--Subtitulos-texto);
   font-size: var(--Tamaño-subtitulo);
   font-weight: var(--Peso-subtitulos-textos);
@@ -288,11 +298,12 @@ li.menu__elemento:focus {
 
 .aficiones__lista {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 2.8rem;
+  gap: 6rem;
   padding: 0 0.9rem;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 
 .aficiones__elemento {
