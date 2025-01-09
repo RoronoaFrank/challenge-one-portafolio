@@ -263,7 +263,7 @@ body {
 /* Tipografía */
 .sobre-mi__titulo {
   font-family: var(--Subtitulos-texto);
-  font-size: var(--Tamaño-subtitulo);
+  font-size: clamp(1.5rem, 3vw, var(--Tamaño-subtitulo));
   font-weight: var(--Peso-subtitulos-textos);
   color: var(--cl-subtitulo);
   line-height: 1.6;
@@ -297,17 +297,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.5625rem;
-  gap: 2rem;
+  margin-bottom: clamp(1rem, 2vw, 1.5625rem);
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: 2rem;
+  background: linear-gradient(to right, var(--cl-fondo), var(--cl-hover));
+  border-radius: 12px;
 }
 
 .habilidades__titulo {
   align-self: center;
   font-family: var(--Subtitulos-texto);
-  font-size: var(--Tamaño-subtitulo);
+  font-size: clamp(1.5rem, 3vw, var(--Tamaño-subtitulo));
   font-weight: var(--Peso-subtitulos-textos);
-  color: var(--color-texto-titulo);
+  color: var(--cl-texto-titulo);
   line-height: 1.6;
+  position: relative;
 }
 
 .habilidades__lista {
@@ -319,16 +323,43 @@ body {
   list-style-type: none;
   flex-wrap: wrap;
   margin-bottom: 1rem;
-}
 
-.bi-filetype-html,
-.bi-filetype-js,
-.bi-filetype-css,
-.bi-filetype-jsx,
-.bi-git,
-.bi-github {
-  font-size: 3.5rem;
-  color: var(--color-texto-titulo);
+  .bi-filetype-html,
+  .bi-filetype-js,
+  .bi-filetype-css,
+  .bi-filetype-jsx,
+  .bi-git,
+  .bi-github {
+    font-size: clamp(3rem, 5vw, 3.5rem);
+    transition: all 0.3s ease;
+  }
+
+  .bi-filetype-html {
+    color: var(--verde-bosque);
+  }
+  .bi-filetype-js {
+    color: var(--tech-azul);
+  }
+  .bi-filetype-css {
+    color: var(--mistico-purpura);
+  }
+  .bi-filetype-jsx {
+    color: var(--plateado-mate);
+  }
+  .bi-git,
+  .bi-github {
+    color: var(--tech-azul);
+  }
+
+  .bi-filetype-html:hover,
+  .bi-filetype-js:hover,
+  .bi-filetype-css:hover,
+  .bi-filetype-jsx:hover,
+  .bi-git:hover,
+  .bi-github:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 8px currentColor);
+  }
 }
 
 /* ------------------- Sección Aficiones ------------------- */
