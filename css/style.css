@@ -241,12 +241,23 @@ body {
   justify-content: space-around;
   gap: 1.25rem;
   padding: 1.7rem;
-}
+  background: linear-gradient(
+    45deg,
+    rgba(34, 139, 34, 0.05),
+    rgba(147, 112, 219, 0.05)
+  );
+  border-radius: 8px;
 
-.sobre-mi__firma {
-  width: 15rem;
-  height: 7rem;
-  align-self: center;
+  .sobre-mi__firma {
+    width: 15rem;
+    height: 7rem;
+    align-self: center;
+    filter: drop-shadow(2px 2px 4px var(--cl-acento-primario));
+    transition: filter 0.3s ease;
+  }
+  .sobre-mi__firma:hover {
+    filter: drop-shadow(3px 3px 6px var(--mistico-purpura));
+  }
 }
 
 /* Tipografía */
@@ -254,15 +265,28 @@ body {
   font-family: var(--Subtitulos-texto);
   font-size: var(--Tamaño-subtitulo);
   font-weight: var(--Peso-subtitulos-textos);
-  color: var(--color-subtitulo);
+  color: var(--cl-subtitulo);
   line-height: 1.6;
+  position: relative;
+  padding-left: 1rem;
+
+  .sobre-mi__titulo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--tech-azul);
+    border-radius: 2px;
+  }
 }
 
 .sobre-mi__texto {
   font-family: var(--Subtitulos-texto);
   font-size: var(--Tamaño-texto);
   font-weight: var(--Peso-subtitulos-textos);
-  color: var(--color-texto-titulo);
+  color: var(--cl-texto-secundario);
   line-height: 1.6;
 }
 
