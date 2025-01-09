@@ -35,7 +35,7 @@
 }
 
 body {
-  background-color: var(--color-fondo);
+  background-color: var(--cl-fondo);
 }
 
 /* Enfoque First Mobile */
@@ -53,13 +53,13 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+
   .nombre__logo {
     width: 200px;
     height: 100px;
     filter: drop-shadow(0 0 8px var(--cl-acento-primario));
   }
-  
+
   .nombre__titulo {
     font-family: var(--Titulos-principales);
     font-size: var(--Tamaño-titulo-out);
@@ -68,7 +68,6 @@ body {
     transition: color 0.3s ease;
   }
 }
-
 
 /* Menú */
 .menu {
@@ -114,7 +113,7 @@ body {
     backdrop-filter: blur(8px);
   }
   .menu__navegacion.activar::after {
-    background-color: rgba(18, 18, 20, 0.85);
+    background-color: rgb(0, 126, 167, 0.6);
     border-radius: 8px;
     content: "";
     height: 100%;
@@ -158,7 +157,6 @@ body {
 
 /* ------------------- Sección Presentación ------------------- */
 
-/* Estructura */
 .presentacion {
   display: flex;
   flex-direction: column;
@@ -183,14 +181,15 @@ body {
   font-family: var(--Subtitulos-texto);
   font-size: var(--Tamaño-subtitulo);
   font-weight: var(--Peso-subtitulos-textos);
-  color: var(--color-subtitulo);
+  color: var(--cl-subtitulo);
+  transition: color 0.3s ease;
 }
 
 .presentacion__subtitulo {
   font-family: var(--Subtitulos-texto);
   font-size: var(--Tamaño-texto);
   font-weight: var(--Peso-subtitulos-textos);
-  color: var(--color-texto-titulo);
+  color: var(--cl-texto-titulo);
   line-height: 1.6;
   padding: 0 1.25rem;
 }
@@ -199,8 +198,14 @@ body {
 .presentacion__foto {
   align-self: center;
   border-radius: 50%;
-  box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(34, 139, 34, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 80%;
+
+  .presentacion__foto:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(34, 139, 34, 0.6);
+  }
 }
 
 /* Redes sociales */
@@ -212,17 +217,18 @@ body {
   gap: 5rem;
   list-style-type: none;
   text-decoration: none;
-}
 
-.redes__menu a {
-  list-style-type: none;
-  text-decoration: none;
-}
+  .redes__menu a {
+    list-style-type: none;
+    text-decoration: none;
+  }
 
-.bi-github,
-.bi-linkedin {
-  color: var(--color-texto-titulo);
-  font-size: 3.5rem;
+  .bi-github,
+  .bi-linkedin {
+    color: var(--tech-azul);
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 3.5rem;
+  }
 }
 
 /* ------------------- Sección Sobre mí ------------------- */
