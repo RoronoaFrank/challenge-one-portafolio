@@ -322,7 +322,7 @@ body {
   padding: 0 0.9rem;
   list-style-type: none;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   .bi-filetype-html,
   .bi-filetype-js,
@@ -363,7 +363,6 @@ body {
 }
 
 /* ------------------- Sección Aficiones ------------------- */
-/*Este contenedor es el que hay que ajustar para que no se desborden los iconos en la version movil*/
 
 .aficiones {
   display: flex;
@@ -373,14 +372,16 @@ body {
   flex-wrap: wrap;
   gap: 1.25rem;
   margin-bottom: 1.5625rem;
+  padding: 2rem;
+ background: linear-gradient(135deg, rgba(192, 192, 196, 0.1), rgba(147, 112, 219, 0.1));
+ border-radius: 12px;
 }
 
 .aficiones__titulo {
-  justify-content: center;
   font-family: var(--Subtitulos-texto);
-  font-size: var(--Tamaño-subtitulo);
+  font-size: clamp(1.5rem, 3vw, var(--Tamaño-subtitulo));
   font-weight: var(--Peso-subtitulos-textos);
-  color: var(--color-texto-titulo);
+  color: var(--cl-texto-titulo);
   line-height: 1.6;
 }
 
@@ -400,18 +401,34 @@ body {
   align-items: center;
   gap: 0.9375rem;
   margin-bottom: 1.5625rem;
+  transition: transform 0.3s ease;
 }
+
+.aficiones__elemento:hover {
+  transform: translateY(-5px);
+ }
 
 .aficiones__nombre {
   font-family: var(--Subtitulos-texto);
-  font-size: var(--Tamaño-texto-corto);
-  color: var(--color-texto-titulo);
+  font-size: clamp(1rem, 2vw, var(--Tamaño-texto-corto));
+ color: var(--cl-texto-secundario);
+ transition: color 0.3s ease;
 }
+
+.aficiones__elemento:hover .aficiones__nombre {
+  color: var(--mistico-purpura);
+ }
 
 .material-symbols-outlined {
   font-size: 3.5rem;
-  color: var(--color-texto-titulo);
+ color: var(--tech-azul);
+ transition: all 0.3s ease;
 }
+
+.aficiones__elemento:hover .material-symbols-outlined {
+  color: var(--verde-bosque);
+  transform: scale(1.1);
+ }
 
 /* ------------------- Sección Proyectos ------------------- */
 
