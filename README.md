@@ -46,6 +46,5 @@ Este proyecto está distribuido bajo la licencia [MIT](https://opensource.org/li
 
 ## 👤 Autor  
 **Franck Devv**  
-Desarrollador web apasionado por crear soluciones funcionales y estéticas.  
-¡Conéctate conmigo!   
+*🎓 Ingeniero en Desarrollo de Software (en proceso) | Frontend Developer | Transformando Código en Soluciones*  
 - [LinkedIn](https://www.linkedin.com/in/devfranciscocruzs)
