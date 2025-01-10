@@ -34,7 +34,7 @@ Este portafolio es un sitio web desarrollado con **HTML**, **CSS** y **JavaScrip
 ---
 
 ## 🌐 Cómo Ver el Proyecto  
-1. Visita el sitio web en [enlace al sitio web en Vercel].  
+1. Visita el portafolio desplegado en [Vercel](https://challenge-one-portafolio-omega.vercel.app/).  
 2. Explora cada sección y prueba la funcionalidad del diseño responsivo.  
 
 ---
